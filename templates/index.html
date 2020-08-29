@@ -29,8 +29,8 @@
           <div class="media">
             <div class="media-body">
               <h2 style="color: white"><b>Latest Mars News:</b></h2>
-              <h4 class="media-heading" style="color: white"><b>{{mars.news_title}}</b></h4>
-              <h5 style="color: white"><p>{{mars.news_paragraph}}</p></h5>
+              <h4 class="media-heading" style="color: white"><b>{{mars_dict.news_title}}</b></h4>
+              <h5 style="color: white"><p>{{mars_dict.news_paragraph}}</p></h5>
             </div>
           </div>
         </div>
@@ -40,7 +40,7 @@
       <div class="row">
         <div class="col-md-9">
           <h2 style="color: white"><b>Featured Mars Image</b></h2>
-            <img src="{{ mars.main_image }}" class="img-responsive">
+            <img src="{{ mars_dict.main_image }}" class="img-responsive">
         </div>
         <!-- Add Current Twitter Mars Weather -->
         <div class="col-md-3">
@@ -49,7 +49,7 @@
               <div class="panel panel-default">
                 <div class="panel-body">
                   <h3 style="color: #000000"><b>Current Weather</b></h3>
-                  <p style="color: #000000">{{mars.weather}}</p>
+                  <p style="color: #000000">{{mars_dict.weather}}</p>
                 </div>
               </div>
             </div>
@@ -58,7 +58,7 @@
           <div class="row">
             <h3 style="color: white">Mars Facts</h3>
             <div class="col-md-12" style="color: white">
-              {{mars.facts | safe}}
+              {{mars_dict.facts | safe}}
             </div>
           </div>
         </div>
@@ -68,7 +68,7 @@
         <div class="page-header">
           <h2 class="text-center" style="color: white"><b>Mars Hemispheres</b></h2>
         </div>
-        {% for hemisphere in mars.hemisphere_image_urls %}
+        {% for hemisphere in mars_dict.hemisphere_image_urls %}
           <div class="col-md-6">
             <div class="thumbnail">
               <img src="{{hemisphere.img_url}}">
@@ -83,5 +83,5 @@
 
   </body>
 
-
+  
   </html>

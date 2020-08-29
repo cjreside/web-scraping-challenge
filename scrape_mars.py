@@ -14,7 +14,7 @@ def scrape():
     browser = init_browser()
     mars_dict ={}
 
-    # Mars News URL of page to be scraped
+      # Mars News URL of page to be scraped
     news_url = 'https://mars.nasa.gov/news/'
     browser.visit(news_url)
     html = browser.html
